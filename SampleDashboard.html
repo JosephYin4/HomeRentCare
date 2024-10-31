@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body id="center">
     <header>
@@ -19,25 +22,42 @@
          <!-- <li><a href="jbroomsrental.html">JB Rooms Rental</a></li> -->
           <li><a href="ourconsultants.html">Our Consultants</a></li>
           <li><a href="contactus.html">Contact Us</a></li>
-          <li><a href="Dashboard.html">Dashboard</a></li>
+          <li><a href="SampleDashboard.html">Sample Dashboard</a></li>
           <li><a href="homeownerslogin.html">Home Owners Login</a></li>
         </ul>
     </header>
 
-    <li align="left">Rental Minus Expenses Paid to Homeowner</li><BR>
-    <div id="container">    
-        <!--<div style="height:80vh" class="chart">
-        <div id="lineChart"></div>
-        </div> -->
-        <div style="height:80vh" class="chart">
-        <div id="barChart"></div>
+    <div class="container">
+        <div class="section" id="tenancy-details">
+            <h2>Tenancy Details</h2>
+            <p>Tenant: John Doe</p>
+            <p>Lease Start: Jan 1, 2023</p>
+            <p>Lease End: Dec 31, 2023</p>
+            <!-- More details can be added here -->
         </div>
+        <div class="section" id="payments-section">
+            <h2>Payments Section</h2>
+            <p>Amount Received: $1200</p>
+            <p>Amount Due: $300</p>
+            <!-- Payment details can be added here -->
         </div>
+        <div class="section" id="issues-section">
+            <h2>Issues Section</h2>
+            <p>Pending Issues: 2</p>
+            <p>Last Reported Issue: Leaky Faucet</p>
+            <!-- Issues can be added here -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="section" id="income-chart">
+            <h2>Net Income Chart</h2>
+            <canvas id="incomeChart"></canvas>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2024 HomeRentCare Copyright</p>
     </footer>
-
+    <script src="javascript/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="script.js"></script>
 </body>
 </html>
